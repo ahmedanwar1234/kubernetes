@@ -1,0 +1,23 @@
+---
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: anwar
+spec:
+  replicas: 8
+  selector:
+    matchLabels:
+     env: prod
+     tier: frontend
+
+  template:
+    metadata:
+      name: dolfined
+      labels:
+        env: prod
+        tier: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
