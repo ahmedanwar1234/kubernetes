@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: anwar-svc
+spec:
+  type: CLusterIP
+  selectors:
+    env: prod
+  ports:
+   - port: 5000
+     targetPort: 80
+#kubectl create deployment anwar --image=nginx --replicas=2 --port=80 --> create deployment
+# kubectl expose deployment anwar --port=5000 --target-port=80 --> create a service for deployment that mean i can access all pods by ip service in port 5000 

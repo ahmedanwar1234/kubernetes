@@ -1,0 +1,8 @@
+
+ - kubectl config set-context --current --namespace="anwar"  --> switch from namespace default to namespace anwar
+
+ - kubectl get pod --watch
+
+ - kubectl exec -it name -- bash
+ 
+ - kubectl get netpol  --> show network policy
